@@ -1,0 +1,10 @@
+money_taken = int(input ('Combien souhaiteriez-vous retirer?\n'))
+def verification_montant(solde, montant_retrait) : 
+    numbers_of_euros = 6767
+    if solde - montant_retrait >= 0 :
+        print ('tout est en règle')
+    else :
+        print ('vous avez demandé un montant trop élevé veuillez rentrer un autre montant')
+
+verification_montant(numbers_of_euros, money_taken)
+    
