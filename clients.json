@@ -1,8 +1,37 @@
-client = ["Nom":"Dupont", "Prénom":"Daniel", "ID": 1234, "Solde": 10000 [] ]
-
-
-client_1 = [Encoredeguèles, \ Jevés, \ 1243, \ 2000]
-client_2 = [Horlayzom, \ Jade, \ 6666, \ 1500]
-client_3 = [Martin, \ Martin, \ 0000, \ 9005]
-client_4 = [Swamp, \ Iso, \ 9876, \ 10000]
-client_5 = [Adercenko, \ Victoriya, \ 1111, \ 3000]
+client = { \ 
+  1234 :[  \
+  "Nom":"Encoredeguèles", \
+  "Prénom":"Jevés", \ 
+  "Solde": 10000, \
+  "Dépots": [], \
+  "Retraits": [] 
+  ]
+6767:[ \
+  "Nom":"Horlayzom", \
+  "Prénom":"Jade", \ 
+  "Solde": 1500, \
+  "Dépots": [], \
+  "Retraits": [] 
+  ]
+0000:[  \
+  "Nom":"Dupont", \
+  "Prénom":"Martin", \ 
+  "Solde": 9005, \
+  "Dépots": [], \
+  "Retraits": []
+  ]
+9876:[  \
+  "Nom":"Swamp", \
+  "Prénom":"Iso", \ 
+  "Solde": 10000, \
+  "Dépots": [], \
+  "Retraits": []
+  ]
+5555:[ \
+  "Nom":"Hoho", \
+  "Prénom":"Gotaga", \ 
+  "Solde": 10000, \
+  "Dépots": [], \
+  "Retraits": []
+  ]
+}
