@@ -1,3 +1,14 @@
+import json
+
+def read_clients_from_json_file(file):
+    with open(file, 'r') as f:
+        clients = json.load(f)
+    return clients 
+
+dump_clients_in_json_file(clients, "clients.json")
+clients = read_clients_from_json_file("clients.json")
+
+
 quitting_words = ["Bye", "bye", "q", "quit", "ciao bella"]
 
 def client_quitting(rep):
