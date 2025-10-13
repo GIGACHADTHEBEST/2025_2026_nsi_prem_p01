@@ -8,8 +8,5 @@ def retirer_argent(solde):
         return solde
     billets = decomposer_billets(montant)
     print("Retrait effectué. Billets délivrés :")
-    for billet, quantite in billets.items():
-        if quantite > 0:
-            print(f"{quantite} billet(s) de {billet} €")
     solde -= montant
     return solde
