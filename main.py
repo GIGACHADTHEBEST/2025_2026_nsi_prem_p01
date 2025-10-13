@@ -12,7 +12,24 @@ def menu():
     print("2. Retirer de l'argent")
     print("3. Déposer de l'argent")
     print("4. Quitter")
+
+def diff_path():
     choix = int(input("Votre choix : "))
+    if choix == 1:
+        check_money(solde)
+        print(solde)
+    elif choix == 2:
+        take_money(somme_voulue)
+        solde = solde - take_money(somme_voulue)
+        print(solde)
+    elif choix == 3:
+        deposit_money(depot_depose)
+        solde = solde + deposit_money(depot_depose)
+        print(solde)
+    elif choix == 4: 
+        print("Au revoir !")
+    else:
+        print("Choix invalide.")
         
 
 
@@ -20,15 +37,4 @@ while not client_quitting() :
     show_welcome_message()
     identification()
     menu()
-    choix = int(input("Votre choix : "))
-        if choix == 1:
-            check_money(solde)
-        elif choix == 2:
-            solde = money_taken(solde)
-        elif choix == 3:
-            solde = money_given(solde)
-        elif choix == 4: 
-            print("Au revoir !")
-            break
-        else:
-            print("Choix invalide.")
+    diff_path()
