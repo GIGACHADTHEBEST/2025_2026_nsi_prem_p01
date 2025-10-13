@@ -21,7 +21,7 @@ def diff_path():
     elif choix == 2:
         take_money(somme_voulue)
         solde = solde - take_money(somme_voulue)
-        print(solde)
+        print(print (f" Vous avez actuellement {solde} € sur votre compte  "))
     elif choix == 3:
         deposit_money(depot_depose)
         solde = solde + deposit_money(depot_depose)
