@@ -1,0 +1,30 @@
+def number_billet_50(money_taken):
+    return money_taken // 50
+def number_billet_20(money_taken):
+    money_taken = money_taken % 50
+    return money_taken // 20
+def number_billet_10(money_taken):
+    money_taken = money_taken % 50 % 20
+    return money_taken // 10
+def number_billet_5(money_taken):
+    return (money_taken % 50 % 20 % 10) // 5
+    
+    
+def montant_billet(money_taken):
+    if money_taken % 5 != 0:
+        print("Le montant doit être un multiple de 5.")
+        return
+nb_50 = number_billet_50(money_taken)
+nb_20 = number_billet_20(money_taken)
+nb_10 = number_billet_10(money_taken)
+nb_5 = number_billet_5(money_taken)
+
+print(f"Vous recevrez :")
+if nb_50 > 0:
+    print(f"- {nb_50} billet(s) de 50$")
+if nb_20 > 0:
+    print(f"- {nb_20} billet(s) de 20$")
+if nb_10 > 0:
+    print(f"- {nb_10} billet(s) de 10$")
+if nb_5 > 0:
+    print(f"- {nb_5} billet(s) de 5$")
