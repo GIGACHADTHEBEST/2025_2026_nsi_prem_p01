@@ -1,9 +1,16 @@
 import json
 
+
 def read_clients_from_json_file(file):
     with open(file, 'r') as f:
         clients = json.load(f)
-    return clients 
+    return clients
+
+def dump_clients_in_json_file(clients, "clients.json"):
+    with open(file, 'w') as f:
+        json.dump (clients, f, indent = 2)
+    return clients
+
 
 dump_clients_in_json_file(clients, "clients.json")
 clients = read_clients_from_json_file("clients.json")
