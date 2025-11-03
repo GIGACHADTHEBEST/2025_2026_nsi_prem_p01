@@ -15,7 +15,7 @@ clients = {
   "Prénom":"Jade",
   "Solde": 1500,
   "Dépots": ["montant" : 563, "date": "2025-10-05"],
-  "Retraits": [] 
+  "Retraits": []  
   ],
 "ID"=30:[
   "PIN"=0000
