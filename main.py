@@ -58,7 +58,7 @@ dump_clients_in_json_file(clients, "clients.json")
 clients = read_clients_from_json_file("clients.json")
 
 
-quitting_words = ["Bye", "bye", "q", "quit", "ciao bella"]
+quitting_words = ["Bye", "bye", "q", "quit", "ciao bella", 4]
 
 def client_quitting(rep):
     return rep in quitting_words
@@ -94,9 +94,9 @@ def identification():
   
 
 def identification_ID():
-  ID_entrée = input("Entrez votre ID")
+  ID_entrée = int(input("Entrez votre ID"))
   while ID_entrée != ID:
-    ID_entrée = input("Entrez votre ID")
+    ID_entrée = int(input("Entrez votre ID"))
 
 def identification_PIN():
   PIN_actuel = clients[ID_entrée][PIN]
@@ -118,7 +118,28 @@ def menu():
     print("3. Déposer de l'argent")
     print("4. Quitter")
 
+def take_money(solde, montant):
+    montant = int(input("Entrez le montant à retirer (multiples de 5 €) : "))
+    if montant % 5 != 0:
+        print("Le montant doit être un multiple de 5 €.")
+        return solde
+    elif montant > solde:
+        print("Fonds insuffisants.")
+        return solde
+    billets = decomposer_billets(montant)
+    print("Retrait effectué. Billets délivrés :")
+    solde = solde-montant
+    print(f"Retrait de {montant} € effectué. Nouveau solde : {solde} €")
+    return solde
 
+def deposit_argent(solde, montant):
+    montant = int(input("Entrez le montant à déposer (multiples de 5 €) : "))
+    if montant % 5 != 0:
+        print("Le montant doit être un multiple de 5 €.")
+        return solde
+    solde = solde + montant
+    print(f"Dépôt de {montant} € effectué. Nouveau solde : {solde} €")
+    return solde
 
 
 def diff_path():
@@ -128,21 +149,13 @@ def diff_path():
         print(solde)
     elif choix == 2:
         take_money(somme_voulue)
-        solde = solde - take_money(somme_voulue)
-        print(print (f" Vous avez actuellement {solde} € sur votre compte  "))
     elif choix == 3:
         deposit_money(depot_depose)
-        solde = solde + deposit_money(depot_depose)
-        print(solde)
     elif choix == 4: 
         print("Au revoir !")
+        client_quitting()
     else:
         print("Choix invalide.")
-
-def check_money(solde, montant_retrait) : 
-    print(clients[])
-    
-        
 
 
 while not client_quitting() :
