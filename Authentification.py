@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 def identification():
     entry = int(input("Entrez votre code PIN : "))
     mdp = 67
@@ -8,7 +9,9 @@ def identification():
         if entry==mdp:
             print("Accès autorisé")
 
-identification()def identification():
+identification()
+=======
+def identification():
     entry = int(input("Entrez votre code PIN : "))
     mdp = 67
     while entry!=mdp:
