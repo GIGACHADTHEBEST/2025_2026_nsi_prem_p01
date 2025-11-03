@@ -85,7 +85,7 @@ def acceptation_condition():
 
 def conditions_totale():
   write_conditions()
-  confirmation()
+  confirmation()   
   acceptation_condition()
 
 def identification():
