@@ -1,5 +1,5 @@
 def retirer_argent(solde):
-    montant = input("Entrez le montant à retirer (multiples de 5 €) : ")
+    montant = int(input("Entrez le montant à retirer (multiples de 5 €) : "))
     if montant % 5 != 0:
         print("Le montant doit être un multiple de 5 €.")
         return solde
@@ -13,7 +13,7 @@ def retirer_argent(solde):
     return solde
 
 def deposer_argent(solde):
-    montant = input("Entrez le montant à déposer (multiples de 5 €) : ")
+    montant = int(input("Entrez le montant à déposer (multiples de 5 €) : "))
     if montant % 5 != 0:
         print("Le montant doit être un multiple de 5 €.")
         return solde
