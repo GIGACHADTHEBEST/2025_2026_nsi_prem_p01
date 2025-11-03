@@ -1,6 +1,6 @@
-def decomposer_billets(montant):
+def decomposer_billets ( montant ) :
     if montant % 5 != 0:
-        return ("Le montant doit être un multiple de 5.")
+        return ( "Le montant doit être un multiple de 5." )
 
     billets = {}
     reste = montant
