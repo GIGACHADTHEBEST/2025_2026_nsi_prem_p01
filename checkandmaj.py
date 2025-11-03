@@ -19,4 +19,4 @@ def deposer_argent(solde):
         return solde
     solde = solde + montant
     print(f"Dépôt de {montant} € effectué. Nouveau solde : {solde} €")
-    return solde
+    return solde          
