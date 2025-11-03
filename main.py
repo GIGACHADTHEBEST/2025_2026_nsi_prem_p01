@@ -1,7 +1,7 @@
 import json
 
-def read_clients_from_json_file(file):
-    with open(file, 'r') as f:
+def read_clients_from_json_file(clients.json):
+    with open(clients.json, 'r') as f:
         clients = json.load(f)
     return clients
 
