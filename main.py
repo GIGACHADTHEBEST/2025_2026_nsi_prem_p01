@@ -2,7 +2,7 @@ import json
 
 clients = {
   "ID"=10 : [
-  "mdp"=1234
+  "PIN"=1234
   "Nom":"Encoredeguèles",
   "Prénom":"Jevés",
   "Solde": 10000,
@@ -10,7 +10,7 @@ clients = {
   "Retraits": [] 
   ],
 "ID"=20:[
-  "mdp"=6767
+  "PIN"=6767
   "Nom":"Horlayzom",
   "Prénom":"Jade",
   "Solde": 1500,
@@ -18,7 +18,7 @@ clients = {
   "Retraits": [] 
   ],
 "ID"=30:[
-  "mdp"=0000
+  "PIN"=0000
   "Nom":"Horn",
   "Prénom":"Gabe",
   "Solde": 9005,
@@ -26,7 +26,7 @@ clients = {
   "Retraits": []
   ],
 "ID"=40:[
-  "mdp"=9876
+  "PIN"=9876
   "Nom":"Swamp",
   "Prénom":"Iso",
   "Solde": 10000,
@@ -34,7 +34,7 @@ clients = {
   "Retraits": []
   ],
 "ID"=50:[
-  "mdp"=5555
+  "PIN"=5555
   "Nom":"Hoho",
   "Prénom":"Gotaga", 
   "Solde": 10000,
@@ -94,7 +94,7 @@ def identification_ID():
     ID_entrée = input("Entrez votre ID")
 
 def identification_mdp():
-  mdp_actuel
+  mdp_actuel = clients[ID_entrée][mdp]
   entry = int(input("Entrez votre code PIN : "))
   while entry!=mdp_actuel:
     if entry==mdp:
