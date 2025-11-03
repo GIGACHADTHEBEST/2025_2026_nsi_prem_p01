@@ -1,35 +1,40 @@
 import json
 
 clients = {
-  1234 : [
+  "ID"=1234 : [
+  "mdp"=1234
   "Nom":"Encoredeguèles",
   "Prénom":"Jevés",
   "Solde": 10000,
   "Dépots": ["montant" : 563, "date": "2025-10-05"],
   "Retraits": [] 
   ],
-6767:[
+"ID"=6767:[
+  "mdp"=6767
   "Nom":"Horlayzom",
   "Prénom":"Jade",
   "Solde": 1500,
   "Dépots": ["montant" : 563, "date": "2025-10-05"],
   "Retraits": [] 
   ],
-0000:[
+"ID"=0000:[
+  "mdp"=0000
   "Nom":"Horn",
   "Prénom":"Gabe",
   "Solde": 9005,
   "Dépots": ["montant" : 563, "date": "2025-10-05"],
   "Retraits": []
   ],
-9876:[
+"ID"=9876:[
+  "mdp"=9876
   "Nom":"Swamp",
   "Prénom":"Iso",
   "Solde": 10000,
   "Dépots": ["montant" : 563, "date": "2025-10-05"],
   "Retraits": []
   ],
-5555:[
+"ID"=5555:[
+  "mdp"=5555
   "Nom":"Hoho",
   "Prénom":"Gotaga", 
   "Solde": 10000,
@@ -82,6 +87,21 @@ def conditions_totale():
   write_conditions()
   confirmation()
   acceptation_condition()
+
+def identification_ID():
+  ID_entrée = input("Entrez votre ID")
+  while ID_entrée != ID:
+    ID_entrée = input("Entrez votre ID")
+
+def identification_mdp():
+  mdp_actuel
+  entry = int(input("Entrez votre code PIN : "))
+  while entry!=mdp_actuel:
+    if entry==mdp:
+      print("Accès autorisé")
+      entry = int(input("Veuillez réesayer : "))
+    if entry==mdp:
+      print("Accès autorisé")
 
 solde = clients[ID]["solde"]
 
