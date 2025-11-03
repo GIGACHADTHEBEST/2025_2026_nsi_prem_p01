@@ -111,6 +111,10 @@ def diff_path():
         print("Au revoir !")
     else:
         print("Choix invalide.")
+
+def check_money(solde, montant_retrait) : 
+    print(clients[])
+    
         
 
 
