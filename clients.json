@@ -1,54 +1,49 @@
 {
-  "clients": {
-    "ID": 10: {
+  "clients": [
+    {
+      "ID": 10,
       "PIN": 1234,
       "Nom": "Encoredeguèles",
       "Prénom": "Jevés",
       "Solde": 10000,
-      "Depots": [
-        { "montant": 563, "date": "2025-10-05" }
-      ],
+      "Depots": [],
       "Retraits": []
     },
-    "ID":20: {
+    {
+      "ID": 20,
       "PIN": 6767,
       "Nom": "Horlayzom",
       "Prénom": "Jade",
       "Solde": 1500,
-      "Depots": [
-        { "montant": 563, "date": "2025-10-05" }
-      ],
+      "Depots": [],
       "Retraits": []
     },
-    "ID":30: {
-      "PIN": 0000,
+    {
+      "ID": 30,
+      "PIN": 0,
       "Nom": "Horn",
       "Prénom": "Gabe",
       "Solde": 9005,
-      "Depots": [
-        { "montant": 563, "date": "2025-10-05" }
-      ],
+      "Depots": [],
       "Retraits": []
     },
-    "ID":40: {
+    {
+      "ID": 40,
       "PIN": 9876,
       "Nom": "Swamp",
       "Prénom": "Iso",
       "Solde": 10000,
-      "Depots": [
-        { "montant": 563, "date": "2025-10-05" }
-      ],
+      "Depots": [],
       "Retraits": []
     },
-    "ID":50: {
+    {
+      "ID": 50,
       "PIN": 5555,
       "Nom": "Hoho",
       "Prénom": "Gotaga",
       "Solde": 10000,
-      "Depots": [
-        { "montant": 563, "date": "2025-10-05" }
-      ],
+      "Depots": [],
       "Retraits": []
     }
-  }
+  ]
 }
