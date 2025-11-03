@@ -12,7 +12,7 @@ clients = {
 "ID"=20:[
   "PIN"=6767
   "Nom":"Horlayzom",
-  "Prénom":"Jade",
+  "Prénom":"Jade", 
   "Solde": 1500,
   "Dépots": ["montant" : 563, "date": "2025-10-05"],
   "Retraits": []  
