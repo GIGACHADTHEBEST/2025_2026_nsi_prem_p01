@@ -106,9 +106,10 @@ def identification_PIN():
   if entry==PIN_actuel:
       print("Accès autorisé")
 
-def check_meney():
+def check_meney(solde):
   solde = clients[ID_entrée]["solde"]
-  print f'("Votre solde est actuellement"{solde}€)
+  global solde
+  print (f" Vous avez actuellement {solde} € sur votre compte  ")
 
 def menu():
     print("\nMenu :")
@@ -116,6 +117,7 @@ def menu():
     print("2. Retirer de l'argent")
     print("3. Déposer de l'argent")
     print("4. Quitter")
+
 
 
 
