@@ -88,19 +88,22 @@ def conditions_totale():
   confirmation()
   acceptation_condition()
 
+def identification():
+  identification_ID()
+  identification_PIN()
+  
+
 def identification_ID():
   ID_entrée = input("Entrez votre ID")
   while ID_entrée != ID:
     ID_entrée = input("Entrez votre ID")
 
-def identification_mdp():
-  mdp_actuel = clients[ID_entrée][mdp]
+def identification_PIN():
+  PIN_actuel = clients[ID_entrée][PIN]
   entry = int(input("Entrez votre code PIN : "))
-  while entry!=mdp_actuel:
-    if entry==mdp:
-      print("Accès autorisé")
-      entry = int(input("Veuillez réesayer : "))
-    if entry==mdp:
+  while entry!=PIN_actuel:
+    entry = int(input("Veuillez réesayer : "))
+  if entry==PIN_actuel:
       print("Accès autorisé")
 
 solde = clients[ID]["solde"]
