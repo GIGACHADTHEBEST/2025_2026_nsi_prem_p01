@@ -15,10 +15,10 @@ dump_clients_in_json_file(clients, "clients.json")
 clients = read_clients_from_json_file("clients.json")
 
 
-quitting_words = ["Bye", "bye", "q", "quit", "ciao bella", ]
+quitting_words = ["Bye", "bye", "q", "quit", "ciao bella", "4"]
 
-def client_quitting(rep):
-    return rep in quitting_words
+def client_quitting():
+    sys.exit()
 
 def show_welcome_message():
     print("Envoie salement des thunes")
@@ -104,7 +104,7 @@ def deposit_argent(solde, montant):
 
 
 def diff_path():
-    choix = int(input("Votre choix : "))
+    choix = input("Votre choix : ")
     if choix == 1:
         check_money(solde)
         print(solde)
@@ -112,7 +112,7 @@ def diff_path():
         take_money(somme_voulue)
     elif choix == 3:
         deposit_money(depot_depose)
-    elif choix == 4: 
+    elif choix == quitting_words: 
         print("Au revoir !")
         client_quitting()
     else:
