@@ -32,7 +32,7 @@ def confirmation():
   print("Les acceptez vous ? ") 
 
 def acceptation_condition():
-  user_answer = input (1 pour ouiii 2 pour hell nah) 
+  user_answer = input ("1 pour ouiii 2 pour hell nah") 
   if user_answer == 1:
     print("super")
   elif user_answer == 2:
