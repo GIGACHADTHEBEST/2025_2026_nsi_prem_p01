@@ -12,7 +12,9 @@ Raphaël Botalla
 •	et quitter le programme proprement.
 Les informations des clients (ID, PIN, solde, etc.) sont stockées dans un fichier JSON (clients.json).
 
-Le programme demande d'abord à l'utilisateur d'accepter les conditions d'utilisation de la banque. Si elles ne sont pas acceptées, l'utilisateur se verra expulser du programme. SI il accepte les conditions un message d'approbation sera affiché et l'utilisateur pourra continuer à s'inscrire dans notre précieuse banque.
+Le programme demande d'abord à l'utilisateur d'accepter les conditions d'utilisation de la banque. Si elles ne sont pas acceptées, l'utilisateur se verra expulser du programme. SI il accepte les conditions un message d'approbation sera affiché et l'utilisateur pourra continuer à s'inscrire dans notre précieuse banque. 
+Le programme permet de s'indentifier avec un ID et un code PIN. En effet l'utilisateur après avoir entrer son ID doit entrer son mot de passe. Si il ne correspond pas, l'accès au compte sera refusé et l'utilisateur sera inviter à entrer un nouveau mot de passe. 
+
 
  
  
