@@ -37,15 +37,17 @@ def confirmation():
     print("2 - Non ")
     
 def acceptation_condition():
-    user_answer = int(input("1 pour ouiii 2 pour hell nah"))
+    try:
+        user_answer = int(input("1 pour ouiii 2 pour hell nah"))
+    except ValueError:
+        print("Répond correctement stp")
+        acceptation_condition()
+        return  # Pour éviter de continuer après récursion
     if user_answer == 1:
         print("super")
     elif user_answer == 2:
-        print ("dommage chef")
+        print("dommage chef")
         client_quitting()
-except ValueError:
-        print("repond salement stp")
-        acceptation_condition()
 
 def conditions_totale():
     write_conditions()
