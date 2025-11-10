@@ -38,6 +38,7 @@ def acceptation_condition():
     if user_answer == 1:
         print("super")
     elif user_answer == 2:
+        print ("dommage chef")
         client_quitting()
     else:
         print("repond salement stp")
