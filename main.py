@@ -155,7 +155,7 @@ def take_money(solde):
     print(f"Retrait de {montant} € effectué. Nouveau solde : {solde} €")
     return solde
 
-def deposit_(solde):
+def deposit_money(solde):
     montant = int(input("Entrez le montant à déposer (multiples de 5 €) : "))
     if montant % 5 != 0:
         print("Le montant doit être un multiple de 5 €.")
