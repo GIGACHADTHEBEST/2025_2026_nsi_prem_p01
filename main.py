@@ -10,10 +10,8 @@ def dump_clients_in_json_file(clients, file):
         json.dump (clients, f, indent = 2)
     return clients
 
-
 clients = read_clients_from_json_file("clients.json")
 dump_clients_in_json_file(clients, "clients.json")
-
 
 quitting_words = ["Bye", "bye", "q", "quit", "ciao bella", "4"]
 
@@ -59,6 +57,9 @@ def identification():
     identification_PIN()
     return ID_entrée
 
+def solde_for_all():
+    global solde
+    solde = clients[ID_entrée]["solde"]
     
 def identification_ID():
     global ID_entrée
@@ -101,7 +102,7 @@ def take_money(solde):
     print(f"Retrait de {montant} € effectué. Nouveau solde : {solde} €")
     return solde
 
-def deposit_argent(solde):
+def deposit_(solde):
     montant = int(input("Entrez le montant à déposer (multiples de 5 €) : "))
     if montant % 5 != 0:
         print("Le montant doit être un multiple de 5 €.")
@@ -132,4 +133,5 @@ while not client_quitting() :
     conditions_totale()
     identification()
     menu()
+    solde_for_all()
     diff_path()
