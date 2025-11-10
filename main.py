@@ -74,7 +74,7 @@ def identification_PIN():
         entry = int(input("Veuillez réesayer : "))
     print("Accès autorisé")
 
-def check_meney():
+def check_money():
     global solde
     solde = clients[ID_entrée]["solde"]
     print (f" Vous avez actuellement {solde} € sur votre compte  ")
@@ -87,7 +87,7 @@ def menu():
     print("3. Déposer de l'argent")
     print("4. Quitter")
 
-def take_money(solde, montant):
+def take_money(solde):
     montant = int(input("Entrez le montant à retirer (multiples de 5 €) : "))
     if montant % 5 != 0:
         print("Le montant doit être un multiple de 5 €.")
@@ -101,7 +101,7 @@ def take_money(solde, montant):
     print(f"Retrait de {montant} € effectué. Nouveau solde : {solde} €")
     return solde
 
-def deposit_argent(solde, montant):
+def deposit_argent(solde):
     montant = int(input("Entrez le montant à déposer (multiples de 5 €) : "))
     if montant % 5 != 0:
         print("Le montant doit être un multiple de 5 €.")
@@ -117,9 +117,9 @@ def diff_path():
         check_money(solde)
         print(solde)
     elif choix == "2":
-        take_money(somme_voulue)
+        take_money(solde)
     elif choix == "3":
-        deposit_money(depot_depose)
+        deposit_money(solde)
     elif choix in quitting_words: 
         print("Au revoir !")
         client_quitting()
