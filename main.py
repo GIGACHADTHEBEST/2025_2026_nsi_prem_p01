@@ -56,13 +56,14 @@ def identification():
 
     
 def identification_ID():
+    global ID_entrée
     ID_entrée = int(input("Entrez votre ID"))
-    ID = list(data["clients"].keys())
+    ID = list(clients.keys())
     while ID_entrée != ID:
         ID_entrée = int(input("Entrez votre ID"))
 
 def identification_PIN():
-    PIN_actuel = clients[ID_entrée][PIN]
+    PIN_actuel = clients[ID_entrée]["PIN"]
     entry = int(input("Entrez votre code PIN : "))
     while entry!=PIN_actuel:
         entry = int(input("Veuillez réesayer : "))
