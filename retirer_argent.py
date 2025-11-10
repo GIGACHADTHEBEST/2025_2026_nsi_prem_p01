@@ -11,12 +11,3 @@ def retirer_argent(solde):
     solde = solde-montant
     print(f"Retrait de {montant} € effectué. Nouveau solde : {solde} €")
     return solde
-
-def deposer_argent(solde):
-    montant = int(input("Entrez le montant à déposer (multiples de 5 €) : "))
-    if montant % 5 != 0:
-        print("Le montant doit être un multiple de 5 €.")
-        return solde
-    solde = solde + montant
-    print(f"Dépôt de {montant} € effectué. Nouveau solde : {solde} €")
-    return solde          
