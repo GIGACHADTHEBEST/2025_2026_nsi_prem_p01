@@ -1,6 +1,7 @@
 import json
+import sys
 
-def read_clients_from_json_file(clients.json):
+def read_clients_from_json_file(file):
     with open(clients.json, 'r') as f:
         clients = json.load(f)
     return clients
@@ -52,6 +53,7 @@ def conditions_totale():
 def identification():
     identification_ID()
     identification_PIN()
+    return ID_entrée
 
     
 def identification_ID():
@@ -124,4 +126,4 @@ while not client_quitting() :
     conditions_totale()
     identification()
     menu()
-    diff_path(identification())
+    diff_path()
