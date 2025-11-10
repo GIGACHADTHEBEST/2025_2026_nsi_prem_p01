@@ -92,7 +92,7 @@ def afficher_billets(billets):
         print(billets)
         return
     
-    print("\n💶 Vous recevrez :")
+    print("\n Vous recevrez :")
     for valeur, quantite in billets.items():
         if quantite > 0:
             print(f"- {quantite} billet(s) de {valeur} €")
@@ -120,11 +120,11 @@ def choisir_billets(montant):
         total += valeur * quantite
 
     if total != montant:
-        print(f"\n⚠️ La somme choisie ({total} €) ne correspond pas au montant demandé ({montant} €).")
+        print(f"\n La somme choisie ({total} €) ne correspond pas au montant demandé ({montant} €).")
         print("On vous proposera la décomposition automatique.")
         return decomposer_billets(montant)
     else:
-        print("\n✅ Choix validé !")
+        print("\n Choix validé !")
         return choix
 def check_money():
     global solde
