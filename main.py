@@ -34,7 +34,7 @@ def confirmation():
     print("2 - Non ")
     
 def acceptation_condition():
-    user_answer = input ("1 pour ouiii 2 pour hell nah") 
+    user_answer = int(input("1 pour ouiii 2 pour hell nah"))
     if user_answer == 1:
         print("super")
     elif user_answer == 2:
@@ -59,7 +59,7 @@ def identification_ID():
     global ID_entrée
     ID_entrée = int(input("Entrez votre ID"))
     ID = list(clients.keys())
-    while ID_entrée != ID:
+    while ID_entrée not in ID:
         ID_entrée = int(input("Entrez votre ID"))
 
 def identification_PIN():
@@ -106,7 +106,7 @@ def deposit_argent(solde, montant):
 
 
 def diff_path():
-    choix = input("Votre choix : ")
+    choix = int(input("Votre choix : "))
     if choix == 1:
         check_money(solde)
         print(solde)
