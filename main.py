@@ -11,8 +11,8 @@ def dump_clients_in_json_file(clients, file):
     return clients
 
 
-dump_clients_in_json_file(clients, "clients.json")
 clients = read_clients_from_json_file("clients.json")
+dump_clients_in_json_file(clients, "clients.json")
 
 
 quitting_words = ["Bye", "bye", "q", "quit", "ciao bella", "4"]
