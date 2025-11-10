@@ -70,8 +70,7 @@ def identification_PIN():
     entry = int(input("Entrez votre code PIN : "))
     while entry!=PIN_actuel:
         entry = int(input("Veuillez réesayer : "))
-        if entry==PIN_actuel:
-            print("Accès autorisé")
+    print("Accès autorisé")
 
 def check_meney(solde):
     solde = clients[ID_entrée]["solde"]
