@@ -1,1 +1,3 @@
-
+def read_clients_from_json_file(file):
+    with open(file, 'r') as f:
+        return json.load(f)
