@@ -1,4 +1,4 @@
-Gwenolé Beillevaire\n
+Gwenolé Beillevaire
 Jermolaj Adarcenko
 Louis El-tantawi
 Raphaël Botalla 
