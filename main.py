@@ -51,7 +51,8 @@ def identification():
   
 
 def identification_ID():
-  ID_entrée = int(input("Entrez votre ID"))
+    ID_entrée = int(input("Entrez votre ID"))
+    ID = list(data["clients"].keys())
   while ID_entrée != ID:
     ID_entrée = int(input("Entrez votre ID"))
 
@@ -65,7 +66,6 @@ def identification_PIN():
 
 def check_meney(solde):
   solde = clients[ID_entrée]["solde"]
-  global solde
   print (f" Vous avez actuellement {solde} € sur votre compte  ")
 
 def menu():
