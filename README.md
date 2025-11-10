@@ -9,7 +9,7 @@ Raphaël Botalla
     - Vérifier que le montant est un multiple de 5 car il n'existe pas de billets qui ne sont pas multiples de 5.
     - Calculer automatiquemnt la répartition de billets nécessaires si l'utilisateur choisis de prendre la répartition donnée automatiquemnt par le distributeur ou si l'utilisateur se trompe dans la répartition de billets qu'il choisit
     -  Demander à l'utilisateur si il veut répartir lui même ses billets
-Ce programme simule un système de gestion bancaire simplifié, permettant à un utilisateur de :
+²Ce programme simule un système de gestion bancaire simplifié, permettant à un utilisateur de :
 •	s’identifier avec un ID et un code PIN,
 •	consulter son solde,
 •	retirer ou déposer de l’argent,
