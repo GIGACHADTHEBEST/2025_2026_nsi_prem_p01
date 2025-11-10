@@ -4,13 +4,13 @@ def read_clients_from_json_file(clients.json):
     with open(clients.json, 'r') as f:
         clients = json.load(f)
     return clients
-#fonction qui permet de 
+
 def dump_clients_in_json_file(clients, "clients.json"):
     with open(file, 'w') as f:
         json.dump (clients, f, indent = 2)
     return clients
 
-#fonction qui permet de 
+
 dump_clients_in_json_file(clients, "clients.json")
 clients = read_clients_from_json_file("clients.json")
 
@@ -19,54 +19,54 @@ quitting_words = ["Bye", "bye", "q", "quit", "ciao bella", 4]
 
 def client_quitting(rep):
     return rep in quitting_words
-#fonction qui permet de 
+
 def show_welcome_message():
     print("Envoie salement des thunes")
-#fonction qui permet d'afficher un message de bienvenue 
+
 def write_conditions():
-  print({"Nos conditions d'utilisation : En acceptant les présentes conditions générales, vous reconnaissez que la Banque agit toujours dans votre intérêt et vous vous engagez à ne jamais contester,} + \
+    print({"Nos conditions d'utilisation : En acceptant les présentes conditions générales, vous reconnaissez que la Banque agit toujours dans votre intérêt et vous vous engagez à ne jamais contester,} + \
   {par quelque voie que ce soit, y compris judiciaire,administrative ou médiatique, les décisions, actions ou omissions de la Banque, même en cas de perte financière, erreur manifeste ou comportement abusif.} + \
   {Vous vous engagez également à ne pas porter plainte, ni participer à aucune action collective ou individuelle contre la Jakob Banque."})
-#fonction qui permet d'afficher les conditions d'utilisation 
+
 def confirmation():
-  print("Les acceptez vous ? ") 
-#fonction qui permet de vérifier si les 
+    print("Les acceptez vous ? ") 
+
 def acceptation_condition():
-  user_answer = input ("1 pour ouiii 2 pour hell nah") 
-  if user_answer == 1:
-    print("super")
-  elif user_answer == 2:
-    client_quitting()
-  else:
-    print("repond salement stp")
+    user_answer = input ("1 pour ouiii 2 pour hell nah") 
+    if user_answer == 1:
+        print("super")
+    elif user_answer == 2:
+        client_quitting()
+    else:
+        print("repond salement stp")
 
 def conditions_totale():
-  write_conditions()
-  confirmation()   
-  acceptation_condition()
+    write_conditions()
+    confirmation()   
+    acceptation_condition()
 
 def identification():
-  identification_ID()
-  identification_PIN()
-  
+    identification_ID()
+    identification_PIN()
 
+    
 def identification_ID():
     ID_entrée = int(input("Entrez votre ID"))
     ID = list(data["clients"].keys())
-  while ID_entrée != ID:
-    ID_entrée = int(input("Entrez votre ID"))
+    while ID_entrée != ID:
+        ID_entrée = int(input("Entrez votre ID"))
 
 def identification_PIN():
-  PIN_actuel = clients[ID_entrée][PIN]
-  entry = int(input("Entrez votre code PIN : "))
-  while entry!=PIN_actuel:
+    PIN_actuel = clients[ID_entrée][PIN]
+    entry = int(input("Entrez votre code PIN : "))
+    while entry!=PIN_actuel:
     entry = int(input("Veuillez réesayer : "))
-  if entry==PIN_actuel:
-      print("Accès autorisé")
+        if entry==PIN_actuel:
+            print("Accès autorisé")
 
 def check_meney(solde):
-  solde = clients[ID_entrée]["solde"]
-  print (f" Vous avez actuellement {solde} € sur votre compte  ")
+    solde = clients[ID_entrée]["solde"]
+    print (f" Vous avez actuellement {solde} € sur votre compte  ")
 
 def menu():
     print("\nMenu :")
