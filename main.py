@@ -2,11 +2,10 @@ import json
 import sys
 
 def read_clients_from_json_file(file):
-    with open(clients.json, 'r') as f:
-        clients = json.load(f)
-    return clients
+    with open(file, 'r') as f:
+        return json.load(f)
 
-def dump_clients_in_json_file(clients, "clients.json"):
+def dump_clients_in_json_file(clients, file):
     with open(file, 'w') as f:
         json.dump (clients, f, indent = 2)
     return clients
