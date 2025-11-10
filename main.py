@@ -43,7 +43,7 @@ def acceptation_condition():
     elif user_answer == 2:
         print ("dommage chef")
         client_quitting()
-    else:
+except ValueError:
         print("repond salement stp")
         acceptation_condition()
 
@@ -72,7 +72,7 @@ def identification_PIN():
         entry = int(input("Veuillez réesayer : "))
     print("Accès autorisé")
 
-def check_meney(solde):
+def check_meney():
     solde = clients[ID_entrée]["solde"]
     print (f" Vous avez actuellement {solde} € sur votre compte  ")
 
