@@ -1,0 +1,14 @@
+def diff_path():
+    choix = input("Votre choix : ")
+    if choix == "1":
+        check_money(solde)
+        print(solde)
+    elif choix == "2":
+        take_money(solde)
+    elif choix == "3":
+        deposit_money(solde)
+    elif choix in quitting_words: 
+        print("Au revoir !")
+        client_quitting()
+    else:
+        print("Choix invalide.")
