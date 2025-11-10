@@ -124,4 +124,4 @@ while not client_quitting() :
     conditions_totale()
     identification()
     menu()
-    diff_path()
+    diff_path(identification())
