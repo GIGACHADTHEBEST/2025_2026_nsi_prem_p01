@@ -30,7 +30,9 @@ def write_conditions():
 
 def confirmation():
     print("Les acceptez vous ? ") 
-
+    print("1 - Oui ")
+    print("2 - Non ")
+    
 def acceptation_condition():
     user_answer = input ("1 pour ouiii 2 pour hell nah") 
     if user_answer == 1:
@@ -39,6 +41,7 @@ def acceptation_condition():
         client_quitting()
     else:
         print("repond salement stp")
+        acceptation_condition()
 
 def conditions_totale():
     write_conditions()
