@@ -1,7 +1,6 @@
 {
-  "clients": [
-    {
-      "ID": 10,
+  "clients": {
+    "10": {
       "PIN": 1234,
       "Nom": "Encoredeguèles",
       "Prénom": "Jevés",
@@ -9,8 +8,7 @@
       "Depots": [],
       "Retraits": []
     },
-    {
-      "ID": 20,
+    "20": {
       "PIN": 6767,
       "Nom": "Horlayzom",
       "Prénom": "Jade",
@@ -18,8 +16,7 @@
       "Depots": [],
       "Retraits": []
     },
-    {
-      "ID": 30,
+    "30": {
       "PIN": 0,
       "Nom": "Horn",
       "Prénom": "Gabe",
@@ -27,8 +24,7 @@
       "Depots": [],
       "Retraits": []
     },
-    {
-      "ID": 40,
+    "40": {
       "PIN": 9876,
       "Nom": "Swamp",
       "Prénom": "Iso",
@@ -36,8 +32,7 @@
       "Depots": [],
       "Retraits": []
     },
-    {
-      "ID": 50,
+    "50": {
       "PIN": 5555,
       "Nom": "Hoho",
       "Prénom": "Gotaga",
@@ -45,5 +40,5 @@
       "Depots": [],
       "Retraits": []
     }
-  ]
+  }
 }
