@@ -109,15 +109,15 @@ def deposit_argent(solde, montant):
 
 
 def diff_path():
-    choix = int(input("Votre choix : "))
-    if choix == 1:
+    choix = input("Votre choix : ")
+    if choix == "1":
         check_money(solde)
         print(solde)
-    elif choix == 2:
+    elif choix == "2":
         take_money(somme_voulue)
-    elif choix == 3:
+    elif choix == "3":
         deposit_money(depot_depose)
-    elif choix == quitting_words: 
+    elif choix in quitting_words: 
         print("Au revoir !")
         client_quitting()
     else:
