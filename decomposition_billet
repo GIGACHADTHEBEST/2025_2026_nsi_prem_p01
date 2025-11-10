@@ -13,22 +13,6 @@ def decomposer_billets(montant):
     return billets
 
 
-def afficher_billets(billets):
-    
-  
-    if isinstance(billets, str):
-        print(billets)
-        return
-    
-    print("Vous recevrez :")
-    for valeur, quantite in billets.items():
-        if quantite > 0:
-            print(f"- {quantite} billet(s) de {valeur} €")
-
-
-
-
-
 def choisir_billets(montant):
     print(f"\nMontant à retirer : {montant} €")
     print("Composez vos billets (entrez 0 si vous ne voulez pas ce type de billet)")
