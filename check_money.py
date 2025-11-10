@@ -1,3 +1,5 @@
-money_given = int(input("Entre la valeur de l argent que tu veux déposer"))
-clients[ID]["Solde"]= money_given + clients[ID]["Solde"]
-print(f"votre compte a maitenant {money_given} de plus donc votre compte a {clients[ID]["Solde"]} euros" )
+def check_meney():
+    global solde
+    solde = clients[ID_entrée]["solde"]
+    print (f" Vous avez actuellement {solde} € sur votre compte  ")
+    return solde
