@@ -40,7 +40,7 @@ def acceptation_condition():
     except ValueError:
         print("Répond correctement stp")
         acceptation_condition()
-        return  # Pour éviter de continuer après récursion
+        return
     if user_answer == 1:
         print("super")
     elif user_answer == 2:
