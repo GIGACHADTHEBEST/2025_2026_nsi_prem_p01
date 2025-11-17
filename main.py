@@ -99,6 +99,58 @@ def deposit_money(solde):
     print(f"Dépôt de {montant} € effectué. Nouveau solde : {solde} €")
     return solde
 
+
+def decomposer_billets(montant):
+    if montant % 5 != 0:
+        return "Le montant doit être un multiple de 5."
+
+    billets = {}
+    reste = montant
+
+    for valeur in [50, 20, 10, 5]:
+        billets[valeur], reste = divmod(reste, valeur)
+    return billets
+
+def afficher_billets(billets):
+    if isinstance(billets, str):
+        print(billets)
+        return
+    
+    print("\n Vous recevrez :")
+    for valeur, quantite in billets.items():
+        if quantite > 0:
+            print(f"- {quantite} billet(s) de {valeur} €")
+
+def choisir_billets(montant):
+    print(f"\nMontant à retirer : {montant} €")
+    print("Composez vos billets (entrez 0 si vous ne voulez pas ce type de billet)")
+
+    total = 0
+    choix = {}
+
+    for valeur in [50, 20, 10, 5]:
+        max_billets = montant // valeur 
+        try:
+            quantite = int(input(f"Combien de billets de {valeur} € ? (max {max_billets}) : "))
+        except ValueError:
+            print("Entrée invalide, remise à 0.")
+            quantite = 0
+
+        if quantite < 0 or quantite > max_billets:
+            print("Quantité invalide, remise à 0.")
+            quantite = 0
+
+        choix[valeur] = quantite
+        total += valeur * quantite
+
+    if total != montant:
+        print(f"\n La somme choisie ({total} €) ne correspond pas au montant demandé ({montant} €).")
+        print("On vous proposera la décomposition automatique.")
+        return decomposer_billets(montant)
+    else:
+        print("\n Choix validé !")
+        return choix
+
 def check_money():
     global solde
     solde = clients[ID_entrée]["solde"]
