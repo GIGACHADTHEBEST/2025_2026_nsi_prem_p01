@@ -42,17 +42,12 @@ def confirmation():
     print("2 - Non ")
 
 def acceptation_condition():
-    try:
-        user_answer = int(input("1 pour ouiii 2 pour hell nah : "))
-    except ValueError:
-        print("Répond correctement stp")
-        return acceptation_condition()
-
-    if user_answer == 1:
-        print("super")
-    elif user_answer == 2:
-        print("dommage chef")
-        client_quitting()
+    user_answer = input("1 pour continuer, autre chose pour quitter : ")
+    if user_answer == "1":
+        print("Super, on continue !")
+    else:
+        print("Merci, bonne journée !")
+        sys.exit()
 
 def conditions_totale():
     write_conditions()
