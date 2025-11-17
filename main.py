@@ -172,10 +172,6 @@ def check_money():
     print(f"Vous avez actuellement {solde} €")
     return solde
 
-def solde_for_all():
-    global solde
-    solde = clients[ID_entrée]["solde"]
-
 def menu():
     print("\nMenu :")
     print("1. Consulter le solde")
@@ -186,8 +182,8 @@ def menu():
 
 show_welcome_message()
 conditions_totale()
-identification()
-solde_for_all()
+ID_entrée = identification()
+solde = clients[ID_entrée]["solde"]
 
 while True:
     menu()
