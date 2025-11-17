@@ -17,7 +17,7 @@ quitting_words = ["Bye", "bye", "q", "quit", "ciao bella", "4"]
 
 def client_quitting():
     print("Au revoir !")
-    sys.exit()
+    sys.exit(0)
 
 def show_welcome_message():
     print("Envoie salement des thunes")
@@ -47,7 +47,7 @@ def acceptation_condition():
         print("Super, on continue !")
     else:
         print("Merci, bonne journée !")
-        sys.exit()
+        sys.exit(0)
 
 def conditions_totale():
     write_conditions()
