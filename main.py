@@ -179,13 +179,15 @@ def diff_path():
         client_quitting()
     else:
         print("Choix invalide.")
+        
 
 
-while True:
     show_welcome_message()
     conditions_totale()
     identification()
     solde_for_all()
-    menu()
-    solde = diff_path(solde)
+    while True:
+        menu()
+        diff_path()
+    
 
