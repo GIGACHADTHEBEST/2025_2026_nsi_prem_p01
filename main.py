@@ -1,8 +1,6 @@
 import json
 import sys
 
-# ------------------ Gestion JSON ------------------
-
 def read_clients_from_json_file(file):
     with open(file, 'r') as f:
         return json.load(f)
@@ -19,8 +17,6 @@ quitting_words = ["Bye", "bye", "q", "quit", "ciao bella", "4"]
 def client_quitting():
     print("Au revoir !")
     sys.exit()
-
-# ------------------ Messages et Conditions ------------------
 
 def show_welcome_message():
     print("Envoie salement des thunes")
@@ -69,7 +65,7 @@ def identification():
 
 def identification_ID():
     while True:
-        ID = input("Entrez votre ID : ")  # ID comme chaîne
+        ID = input("Entrez votre ID : ") 
         if ID in clients:
             return ID
         print("ID invalide, réessayez.")
