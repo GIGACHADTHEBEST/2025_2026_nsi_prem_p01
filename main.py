@@ -163,9 +163,8 @@ def choisir_billets(montant):
         print("\n Choix validé !")
         return choix
 
-def check_money():
-    global solde
-    solde = clients[ID_entrée]["solde"]
+def check_money(ID):
+    solde = clients[ID]["solde"]
     print(f"Vous avez actuellement {solde} €")
     return solde
 
