@@ -59,9 +59,10 @@ def conditions_totale():
     acceptation_condition()
 
 def identification():
-    global ID_entrée
-    ID_entrée = identification_ID()
-    identification_PIN()
+    ID = identification_ID()
+    identification_PIN(ID)
+    return ID
+
     
     
 def identification_ID():
