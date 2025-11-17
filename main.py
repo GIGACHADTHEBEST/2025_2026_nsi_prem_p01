@@ -86,8 +86,20 @@ def take_money(solde):
     if montant > solde:
         print("Fonds insuffisants.")
         return solde
+    print("\nSouhaitez-vous :")
+    print("1 - Décomposition automatique des billets")
+    print("2 - Choisir vous-même les billets")
+    mode = input("Votre choix : ")
+    if mode == "2":
+        billets = choisir_billets(montant)
+        print("\nDécomposition choisie :")
+        afficher_billets(billets)
+    else:
+        billets = decomposer_billets(montant)
+        print("\nDécomposition automatique :")
+        afficher_billets(billets)
     solde -= montant
-    print(f"Retrait de {montant} € effectué. Nouveau solde : {solde} €")
+    print(f"\nRetrait de {montant} € effectué. Nouveau solde : {solde} €")
     return solde
 
 def deposit_money(solde):
