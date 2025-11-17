@@ -10,7 +10,8 @@ def dump_clients_in_json_file(clients, file):
         json.dump(clients, f, indent=2)
     return clients
 
-clients = read_clients_from_json_file("clients.json")
+clients_data = read_clients_from_json_file("clients.json")
+clients = clients_data["clients"]
 
 quitting_words = ["Bye", "bye", "q", "quit", "ciao bella", "4"]
 
