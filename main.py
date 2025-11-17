@@ -59,9 +59,10 @@ def conditions_totale():
     acceptation_condition()
 
 def identification():
-    identification_ID()
+    global ID_entrée
+    ID_entrée = identification_ID()
     identification_PIN()
-
+    
 def solde_for_all():
     global solde
     solde = clients[ID_entrée]["solde"]
@@ -79,6 +80,7 @@ def identification_ID():
             print("Entrée invalide.")
 
 def identification_PIN():
+    global ID_entrée
     PIN_actuel = clients[ID_entrée]["PIN"]
     entry = int(input("Entrez votre code PIN : "))
     while entry != PIN_actuel:
