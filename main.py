@@ -72,13 +72,13 @@ def identification_ID():
         print("ID invalide, réessayez.")
 
 
-def identification_PIN():
-    global ID_entrée
-    PIN_actuel = clients[ID_entrée]["PIN"]
+def identification_PIN(ID):
+    PIN_actuel = clients[ID]["PIN"]
     entry = int(input("Entrez votre code PIN : "))
     while entry != PIN_actuel:
         entry = int(input("Veuillez réessayer : "))
     print("Accès autorisé")
+
 
 def take_money(solde):
     montant = int(input("Entrez le montant à retirer : "))
