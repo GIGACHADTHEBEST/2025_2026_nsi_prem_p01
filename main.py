@@ -109,7 +109,7 @@ def take_money(ID):
         print("\nSouhaitez-vous :")
         print("1 - Décomposition automatique des billets")
         print("2 - Choisir vous-même les billets")
-        mode = input("Votre choix : ")
+        mode = input("1 - Décomposition automatique des billets 2 - Choisir vous-même les billets. Votre choix : ")
         if mode == "2":
             billets = choisir_billets(montant)
             print("\nDécomposition choisie :")
