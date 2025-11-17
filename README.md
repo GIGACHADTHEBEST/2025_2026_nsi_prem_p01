@@ -12,7 +12,7 @@ Raphaël Botalla
 •	et quitter le programme proprement.
 Les informations des clients (ID, PIN, solde, etc.) sont stockées dans un fichier JSON (clients.json).
 
--  Le programme demande d'abord à l'utilisateur d'accepter les conditions d'utilisation de la banque. Si elles ne sont pas acceptées, l'utilisateur se verra expulser du programme. SI il accepte les conditions un message d'approbation sera affiché et l'utilisateur pourra continuer à s'inscrire dans notre précieuse banque. Les conditions sont définis par "write_conditions" et le fait d'accepter ces conditions est définis (gars) par "confirmation"
+-  Le programme demande d'abord à l'utilisateur d'accepter les conditions d'utilisation de la banque. Si elles ne sont pas acceptées, l'utilisateur se verra expulser du programme. SI il accepte les conditions un message d'approbation sera affiché et l'utilisateur pourra continuer à s'inscrire dans notre précieuse banque. Les conditions sont définis par "write_conditions" et le fait d'accepter ces conditions est définis par "confirmation"
 -  Le programme permet de s'indentifier avec un ID et un code PIN. En effet l'utilisateur après avoir entrer son ID doit entrer son mot de passe. Si il ne correspond pas, l'accès au compte sera refusé et l'utilisateur sera invité à entrer le bon mot de passe.
 
 Le programme permet avant tout à l'utilisateur de choisir l'action qu'il veut faire entre consulter son solde, retirer de l'argent, déposer de l'argent et quitter le compte. C'est la fonction "menu" qui permet ce choix.
