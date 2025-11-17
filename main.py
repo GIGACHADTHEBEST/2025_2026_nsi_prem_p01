@@ -60,11 +60,16 @@ def solde_for_all():
     solde = clients[ID_entrée]["solde"]
 
 def identification_ID():
-    global ID_entrée
-    ID_entrée = int(input("Entrez votre ID : "))
-    ID = list(clients.keys())
-    while ID_entrée not in ID:
-        ID_entrée = int(input("Entrez votre ID : "))
+    while True:
+        try:
+            ID_entrée = input("Entrez votre ID : ")
+
+            if ID_entrée in clients:
+                return ID_entrée
+
+            print("ID invalide, réessayez.")
+        except ValueError:
+            print("Entrée invalide.")
 
 def identification_PIN():
     PIN_actuel = clients[ID_entrée]["PIN"]
