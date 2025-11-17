@@ -24,8 +24,15 @@ def show_welcome_message():
 def write_conditions():
     print("""
 Nos conditions d'utilisation :
-En acceptant les présentes conditions générales, vous reconnaissez que la Banque agit toujours dans votre intérêt et
-vous vous engagez à ne jamais contester, par quelque voie que ce soit, les décisions ou actions de la Banque.
+
+En acceptant ces conditions, vous reconnaissez officiellement que la Banque est toujours parfaite, 
+même lorsqu’elle ne l’est absolument pas. Vous acceptez également de ne jamais porter plainte, 
+même en cas de vol, disparition mystérieuse de votre argent, ou intrusion de pigeons dans votre compte.
+
+Vous vous engagez aussi à sourire en toutes circonstances, à répondre "oui" sans lire les petits astérisques,
+et à ne jamais demander pourquoi les frais augmentent chaque mardi à 3h17 du matin.
+
+Merci de votre compréhension, ou de l’illusion de celle-ci.
 """)
 
 def confirmation():
