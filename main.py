@@ -183,7 +183,6 @@ def menu():
 show_welcome_message()
 conditions_totale()
 identification()
-solde_for_all()
 
 while True:
     menu()
