@@ -66,15 +66,11 @@ def identification():
     
 def identification_ID():
     while True:
-        try:
-            ID_entrée = input("Entrez votre ID : ")
+        ID = input("Entrez votre ID : ")
+        if ID in clients:
+            return ID
+        print("ID invalide, réessayez.")
 
-            if ID_entrée in clients:
-                return ID_entrée
-
-            print("ID invalide, réessayez.")
-        except ValueError:
-            print("Entrée invalide.")
 
 def identification_PIN():
     global ID_entrée
