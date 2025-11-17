@@ -63,10 +63,9 @@ def identification():
     ID_entrée = identification_ID()
     identification_PIN()
     
-def solde_for_all():
-    global solde
-    solde = clients[ID_entrée]["solde"]
-
+def solde_for_all(ID):
+    return clients[ID]["solde"]
+    
 def identification_ID():
     while True:
         try:
