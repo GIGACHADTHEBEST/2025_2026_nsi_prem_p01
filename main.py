@@ -80,12 +80,12 @@ def identification_PIN(ID):
         print("Code PIN incorrect, réessayez.")
 
 def check_money(ID):
-    solde = clients[ID]["Solde"]  # utilise la clé "Solde"
+    solde = clients[ID]["Solde"]
     print(f"Vous avez actuellement {solde} €")
     return solde
     
 def take_money(ID):
-    solde = clients[ID]["Solde"]  # utilise la clé "Solde"
+    solde = clients[ID]["Solde"]
     while True:
         try:
             montant = int(input("Entrez le montant à retirer : "))
@@ -122,7 +122,7 @@ def take_money(ID):
     return solde
 
 def deposit_money(ID):
-    solde = clients[ID]["Solde"]  # utilise la clé "Solde"
+    solde = clients[ID]["Solde"]
     while True:
         try:
             montant = int(input("Entrez le montant à déposer : "))
