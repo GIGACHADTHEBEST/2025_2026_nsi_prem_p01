@@ -1,0 +1,6 @@
+def decomposer_billets(montant):
+    billets = {}
+    reste = montant
+    for valeur in [50, 20, 10, 5]:
+        billets[valeur], reste = divmod(reste, valeur)
+    return billets
