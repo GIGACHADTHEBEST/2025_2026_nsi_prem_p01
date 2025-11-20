@@ -30,6 +30,29 @@ Le montant saisi est ensuite directement ajouté au solde et enregistré dans le
 
 Les options du programme proposent à l'utilisateur de consulter son solde grâce à la fonction " check_money " qui consiste donc à vérifier son solde.
 
-Si l'utilisateur le décide il peut quitter le programme grâce à la fonction " quitting_words "
+Si l'utilisateur le décide il peut quitter le programme grâce à la fonction " quitting_words ".
+
+Role des membre du groupe dans le projet :
+- Jermolajs :
+   - Principal codeur du projet
+   - Impliqué dans toutes les fonctions du programme
+   - Participation au json
+   - Correction et amélioration du programme
+   - création du menu
+- Louis :
+   - Implication dans toutes les fonctions du programme
+   - Création de la fonction "take_money" et "deposit_money"
+   - création des différents choix dans l'interface
+- Gwenolé :
+   - Ecriture parfaite ET magnifique ET incroyable ET meilleur ET rarissime du readme tout a fait splendide
+   - cocréation de la fonction "choisir_billets"
+   - aide dans les fonctions "take_money" et "deposit_money"
+- Raphaël :
+   - Participation au json
+   - Création de fonction "write_conditions"
+   - cocréation de la fonction "choisir_billets"
+ 
+Très grande difficultée dans la réalisation du json et de l'appel personnalisé de chaque utilisateur grace à l'ID qui permet de personnaliser chaque donnée (nom, prénom, PIN, solde...). D'autres difficultées moins conséquentes sont apparus, le fait de les résoudre nous a permis de nous forger pour améliorer drastiquement notre capacité à coder. 
+   
 
  
