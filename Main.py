@@ -1,5 +1,9 @@
 import json
 import sys
+import os
+
+def clear():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 def read_clients_from_json_file(file):
     with open(file, 'r') as f:
@@ -194,17 +198,27 @@ conditions_totale()
 ID_entrée = identification()
 
 while True:
-    print(f"\nBonjour {clients[ID_entrée]['Prénom']} {clients[ID_entrée]['Nom']}.")
+    clear()  
+    print(f"Bonjour {clients[ID_entrée]['Prénom']} {clients[ID_entrée]['Nom']}.\n")
+
     menu()
     choix = input("Votre choix : ")
 
+    clear()
+
     if choix == "1":
         check_money(ID_entrée)
+
     elif choix == "2":
         take_money(ID_entrée)
+
     elif choix == "3":
         deposit_money(ID_entrée)
+
     elif choix in quitting_words or choix == "4":
         client_quitting()
+
     else:
         print("Choix invalide.")
+
+    input("\nAppuyez sur Entrée pour revenir au menu...")
