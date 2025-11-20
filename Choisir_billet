@@ -1,0 +1,26 @@
+
+def choisir_billets(montant):
+    print(f"\nMontant à retirer : {montant} €")
+    print("Composez vos billets (entrez 0 si vous ne voulez pas ce type de billet)")
+    total = 0
+    choix = {}
+    for valeur in [50, 20, 10, 5]:
+        max_billets = montant // valeur
+        try:
+            quantite = int(input(f"Combien de billets de {valeur} € ? (max {max_billets}) : "))
+        except ValueError:
+            print("Entrée invalide, remise à 0.")
+            quantite = 0
+        if quantite < 0 or quantite > max_billets:
+            print("Quantité invalide, remise à 0.")
+            quantite = 0
+        choix[valeur] = quantite
+        total += valeur * quantite
+
+    if total != montant:
+        print(f"\nLa somme choisie ({total} €) ne correspond pas au montant demandé ({montant} €).")
+        print("On vous proposera la décomposition automatique.")
+        return decomposer_billets(montant)
+    else:
+        print("\nChoix validé !")
+        return choix
