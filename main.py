@@ -194,7 +194,7 @@ conditions_totale()
 ID_entrée = identification()
 
 while True:
-    print(f"\nBonjour {clients[ID_entrée]['Prénom']}.")
+    print(f"\nBonjour {clients[ID_entrée]['Prénom']} {clients[ID_entrée]['Nom']} .")
     menu()
     choix = input("Votre choix : ")
 
