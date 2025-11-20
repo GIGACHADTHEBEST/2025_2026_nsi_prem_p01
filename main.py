@@ -73,7 +73,6 @@ def identification_PIN(ID):
             entry = int(input("Entrez votre code PIN : "))
         except ValueError:
             print("Code PIN invalide, entrez un nombre.")
-            continue
         if entry == PIN_actuel:
             print("Accès autorisé")
             break
@@ -115,7 +114,9 @@ def take_money(ID):
             afficher_billets(billets)
         solde -= montant
         clients[ID]["Solde"] = solde
-        clients[ID].setdefault("Retraits", []).append(montant)
+        if "Retraits" not in clients[ID]:
+            clients[ID]["Retraits"] = []
+            clients[ID]["Retraits"].append(montant)
         dump_clients_in_json_file(clients, "clients.json")
         print(f"\nRetrait de {montant} € effectué. Nouveau solde : {solde} €")
         break
@@ -134,7 +135,9 @@ def deposit_money(ID):
             print("Le montant doit être un multiple de 5 €.") 
         solde += montant
         clients[ID]["Solde"] = solde
-        clients[ID].setdefault("Depots", []).append(montant)
+        if "Depots" not in clients[ID]:
+            clients[ID]["Depots"] = []
+            clients[ID]["Depots"].append(montant)
         dump_clients_in_json_file(clients, "clients.json")
         print(f"Dépôt de {montant} € effectué. Nouveau solde : {solde} €")
         break
