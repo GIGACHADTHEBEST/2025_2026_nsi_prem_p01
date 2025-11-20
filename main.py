@@ -183,6 +183,7 @@ def choisir_billets(montant):
         return choix
 
 def menu():
+    print(f"Bonjour, " + "clients[ID]["Nom"] " + "clients[ID]["Prénom"]")
     print("\nMenu :")
     print("1. Consulter le solde")
     print("2. Retirer de l'argent")
