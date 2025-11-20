@@ -13,7 +13,7 @@ def dump_clients_in_json_file(clients, file):
 clients_data = read_clients_from_json_file("clients.json")
 clients = clients_data["clients"]
 
-quitting_words = ["Bye", "bye", "q", "quit", "ciao bella", "4"]
+quitting_words = ["Bye", "bye", "q", "quit", "ciao bella", "4"] 
 
 def client_quitting():
     print("Au revoir !")
