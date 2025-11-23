@@ -3,7 +3,7 @@ import sys
 import os
 
 def clear():
-    os.system('cls' if os.name == 'nt' else 'clear')
+    os.system('cls')
 
 def read_clients_from_json_file(file):
     with open(file, 'r') as f:
