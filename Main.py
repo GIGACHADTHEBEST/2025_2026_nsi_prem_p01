@@ -129,18 +129,26 @@ def deposit_money(ID):
             montant = int(input("Entrez le montant à déposer : "))
         except ValueError:
             print("Entrée invalide, entrez un nombre.")
+            continue
+
         if montant <= 0:
             print("Montant invalide.")
+            continue
+
         if montant % 5 != 0:
-            print("Le montant doit être un multiple de 5 €.") 
+            print("Le montant doit être un multiple de 5 €.")
+            continue
+
         solde += montant
         clients[ID]["Solde"] = solde
-        if "Depots" not in clients[ID]:
-            clients[ID]["Depots"] = []
-            clients[ID]["Depots"].append(montant)
-        dump_clients_in_json_file(clients, "clients.json")
+
+        clients[ID].setdefault("Depots", []).append(montant)
+
+        dump_clients_in_json_file(clients_data, "clients.json")
+
         print(f"Dépôt de {montant} € effectué. Nouveau solde : {solde} €")
         break
+
     return solde
     
 def decomposer_billets(montant):
