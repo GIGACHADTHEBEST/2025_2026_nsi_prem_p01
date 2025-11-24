@@ -1,7 +1,7 @@
 {
   "clients": {
     "10": {
-      "PIN": "1234",
+      "PIN": 1234,
       "Nom": "Encoredeguèles",
       "Prénom": "Jevés",
       "Solde": 10000,
