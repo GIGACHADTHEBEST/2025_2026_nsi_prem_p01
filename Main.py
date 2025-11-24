@@ -90,16 +90,12 @@ def take_money(ID):
             montant = int(input("Entrez le montant à retirer : "))
         except ValueError:
             print("Entrée invalide, entrez un nombre.")
-            continue
         if montant <= 0:
             print("Montant invalide.")
-            continue
         if montant % 5 != 0:
             print("Le montant doit être un multiple de 5 €.")
-            continue
         if montant > solde:
             print("Fonds insuffisants.")
-            continue
         print("\nSouhaitez-vous :")
         print("1 - Décomposition automatique des billets")
         print("2 - Choisir vous-même les billets")
