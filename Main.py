@@ -75,7 +75,6 @@ def identification_PIN(ID):
             print("Code PIN invalide, entrez un nombre.")
         if entry == PIN_actuel:
             print("Accès autorisé")
-            break
         print("Code PIN incorrect, réessayez.")
 
 def check_money(ID):
@@ -115,7 +114,6 @@ def take_money(ID):
             clients[ID]["Retraits"].append(montant)
         dump_clients_in_json_file(clients, "clients.json")
         print(f"\nRetrait de {montant} € effectué. Nouveau solde : {solde} €")
-        break
     return solde
 
 def deposit_money(ID):
@@ -136,7 +134,6 @@ def deposit_money(ID):
             clients[ID]["Depots"].append(montant)
         dump_clients_in_json_file(clients, "clients.json")
         print(f"Dépôt de {montant} € effectué. Nouveau solde : {solde} €")
-        break
     return solde
     
 def decomposer_billets(montant):
