@@ -129,11 +129,10 @@ def deposit_money(ID):
             print("Le montant doit être un multiple de 5 €.") 
         solde += montant
         clients[ID]["Solde"] = solde
-        if "Depots" not in clients[ID]:
-            clients[ID]["Depots"] = []
-            clients[ID]["Depots"].append(montant)
+        clients[ID].setdefault("Depots", []).append(montant)
         dump_clients_in_json_file(clients, "clients.json")
         print(f"Dépôt de {montant} € effectué. Nouveau solde : {solde} €")
+        break
     return solde
     
 def decomposer_billets(montant):
