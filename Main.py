@@ -189,32 +189,34 @@ def menu():
     print("3. Déposer de l'argent")
     print("4. Quitter")
 
-show_welcome_message()
-conditions_totale()
-ID_entrée = identification()
 
-while True:
-    clear()
-    print(f"Bonjour {clients[ID_entrée]['Prénom']} {clients[ID_entrée]['Nom']}.\n")
 
-    menu()
-    choix = input("Votre choix : ")
+def main():
+    show_welcome_message()
+    conditions_totale()
+    ID_entrée = identification()
+    
+    while True:
+        print(f"Bonjour {clients[ID_entrée]['Prénom']} {clients[ID_entrée]['Nom']}.\n")
+        menu()
+        choix = input("Votre choix : ")
+    
+        if choix == "1":
+            check_money(ID_entrée)
+    
+        elif choix == "2":
+            take_money(ID_entrée)
+    
+        elif choix == "3":
+            deposit_money(ID_entrée)
+    
+        elif choix in quitting_words or choix == "4":
+            client_quitting()
+    
+        else:
+            print("Choix invalide.")
+    
+        input("\nAppuyez sur Entrée pour revenir au menu...")
 
-    clear()
 
-    if choix == "1":
-        check_money(ID_entrée)
-
-    elif choix == "2":
-        take_money(ID_entrée)
-
-    elif choix == "3":
-        deposit_money(ID_entrée)
-
-    elif choix in quitting_words or choix == "4":
-        client_quitting()
-
-    else:
-        print("Choix invalide.")
-
-    input("\nAppuyez sur Entrée pour revenir au menu...")
+main()
