@@ -1,0 +1,5 @@
+def afficher_billets(billets):
+    print("\nVous recevrez :")
+    for valeur, quantite in billets.items():
+        if quantite > 0:
+            print(f"- {quantite} billet(s) de {valeur} €")

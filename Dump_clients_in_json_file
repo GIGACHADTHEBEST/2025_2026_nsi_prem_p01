@@ -1,0 +1,4 @@
+def dump_clients_in_json_file(clients, file):
+    with open(file, 'w') as f:
+        json.dump(clients, f, indent=2)
+    return clients

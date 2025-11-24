@@ -1,0 +1,18 @@
+def deposit_money(ID):
+    solde = clients[ID]["Solde"]
+    while True:
+        try:
+            montant = int(input("Entrez le montant à déposer : "))
+        except ValueError:
+            print("Entrée invalide, entrez un nombre.")
+        if montant <= 0:
+            print("Montant invalide.")
+        if montant % 5 != 0:
+            print("Le montant doit être un multiple de 5 €.") 
+        solde += montant
+        clients[ID]["Solde"] = solde
+        clients[ID].setdefault("Depots", []).append(montant)
+        dump_clients_in_json_file(clients, "clients.json")
+        print(f"Dépôt de {montant} € effectué. Nouveau solde : {solde} €")
+        break
+    return solde
