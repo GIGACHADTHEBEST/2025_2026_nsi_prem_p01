@@ -1,9 +1,5 @@
 import json
 import sys
-import os
-
-def clear():
-    os.system('cls')
 
 def read_clients_from_json_file(file):
     with open(file, 'r') as f:
@@ -198,7 +194,7 @@ conditions_totale()
 ID_entrée = identification()
 
 while True:
-    clear()  
+    clear()
     print(f"Bonjour {clients[ID_entrée]['Prénom']} {clients[ID_entrée]['Nom']}.\n")
 
     menu()
