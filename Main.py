@@ -42,7 +42,7 @@ def confirmation():
     print("2 - Non ")
 
 def acceptation_condition():
-    user_answer = input("1 pour continuer, autre chose pour quitter : ")
+    user_answer = input("1 pour accepter les condtions sinon appuyer sur autre chose : ")
     if user_answer == "1":
         print("Super, on continue !")
     else:
