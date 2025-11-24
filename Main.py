@@ -215,8 +215,5 @@ def main():
     
         else:
             print("Choix invalide.")
-    
-        input("\nAppuyez sur Entrée pour revenir au menu...")
-
-
+            
 main()
