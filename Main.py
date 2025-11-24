@@ -194,9 +194,9 @@ def menu():
 show_welcome_message()
 conditions_totale()
 ID_entrée = identification()
+print(f"Bonjour {clients[ID_entrée]['Prénom']} {clients[ID_entrée]['Nom']}.\n")
     
 while True:
-    print(f"Bonjour {clients[ID_entrée]['Prénom']} {clients[ID_entrée]['Nom']}.\n")
     menu()
     choix = input("Votre choix : ")
     
