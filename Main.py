@@ -42,7 +42,7 @@ def confirmation():
     print("2 - Non ")
 
 def acceptation_condition():
-    user_answer = input("1 pour accepter les condtions sinon appuyer sur autre chose : ")
+    user_answer = input("1 pour continuer, autre chose pour quitter : ")
     if user_answer == "1":
         print("Super, on continue !")
     else:
@@ -75,6 +75,7 @@ def identification_PIN(ID):
             print("Code PIN invalide, entrez un nombre.")
         if entry == PIN_actuel:
             print("Accès autorisé")
+            break
         print("Code PIN incorrect, réessayez.")
 
 def check_money(ID):
@@ -134,7 +135,9 @@ def deposit_money(ID):
             print("Le montant doit être un multiple de 5 €.") 
         solde += montant
         clients[ID]["Solde"] = solde
-        clients[ID].setdefault("Depots", []).append(montant)
+        if "Depots" not in clients[ID]:
+            clients[ID]["Depots"] = []
+            clients[ID]["Depots"].append(montant)
         dump_clients_in_json_file(clients, "clients.json")
         print(f"Dépôt de {montant} € effectué. Nouveau solde : {solde} €")
         break
@@ -186,30 +189,25 @@ def menu():
     print("3. Déposer de l'argent")
     print("4. Quitter")
 
-
-
 show_welcome_message()
 conditions_totale()
 ID_entrée = identification()
-print(f"Bonjour {clients[ID_entrée]['Prénom']} {clients[ID_entrée]['Nom']}.\n")
-    
+
 while True:
+    print(f"Bonjour {clients[ID_entrée]['Prénom']} {clients[ID_entrée]['Nom']}.\n")
     menu()
     choix = input("Votre choix : ")
-    
     if choix == "1":
         check_money(ID_entrée)
-    
+
     elif choix == "2":
         take_money(ID_entrée)
-    
+
     elif choix == "3":
         deposit_money(ID_entrée)
-    
+
     elif choix in quitting_words or choix == "4":
         client_quitting()
-    
+
     else:
         print("Choix invalide.")
-            
-
